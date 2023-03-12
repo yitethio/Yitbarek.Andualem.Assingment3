@@ -74,8 +74,8 @@ class _homePageState extends State<homePage> {
                       Column(
                         children: [
                           Container(
-                            height: 78,
-                            width: 93,
+                            height: 138,
+                            width: 123,
                             decoration: BoxDecoration(
                                 image: DecorationImage(
                                     fit: BoxFit.contain,
@@ -85,20 +85,32 @@ class _homePageState extends State<homePage> {
                                     const Color.fromRGBO(217, 217, 217, 100)),
                             margin: const EdgeInsets.fromLTRB(15, 13, 0, 0),
                           ),
-                          Container(
-                            margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                            child: Text("${goasbezaval.foodPrice}\$"),
-                          ),
-                          Container(
-                            margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                            child: const Text('1KG'),
-                          )
                         ],
                       ),
                       Column(
                         children: [
-                          Row(
+                          Column(
                             children: [
+                              Container(
+                                width: 132,
+                                height: 73,
+                                margin: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+                                child: Text(
+                                  goasbezaval.foodTitle,
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                child: Text(
+                                  "price:${goasbezaval.foodPrice}\$",
+                                  style: TextStyle(
+                                      fontSize: 19,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
                               // Container(
                               //   margin:
                               //       const EdgeInsets.fromLTRB(30, 30, 0, 0),
@@ -110,11 +122,11 @@ class _homePageState extends State<homePage> {
                               //       onPressed: () {},
                               //       child: const Text("+")),
                               // ),
-                              Container(
-                                margin: EdgeInsets.fromLTRB(5, 30, 5, 0),
-                                color: Color.fromARGB(0, 50, 146, 190),
-                                child: const Text("5"),
-                              ),
+                              // Container(
+                              //   margin: EdgeInsets.fromLTRB(5, 30, 5, 0),
+                              //   color: Color.fromARGB(0, 50, 146, 190),
+                              //   child: const Text("5"),
+                              // ),
                               // Container(
                               //   margin: EdgeInsets.fromLTRB(60, 30, 0, 0),
                               //   child: ElevatedButton(
@@ -132,7 +144,7 @@ class _homePageState extends State<homePage> {
                             height: 31,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(34)),
-                            margin: EdgeInsets.fromLTRB(60, 54, 0, 5),
+                            margin: EdgeInsets.fromLTRB(60, 14, 0, 5),
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                   primary: Color.fromARGB(

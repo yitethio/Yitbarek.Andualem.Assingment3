@@ -66,30 +66,31 @@ class _profileState extends State<profile> {
             width: 200,
             height: 200,
             decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('asset/thi.png'), fit: BoxFit.contain),
                 borderRadius: BorderRadius.circular(100),
                 color: Color.fromARGB(156, 8, 8, 8)),
-            margin: EdgeInsets.fromLTRB(94, 54, 0, 0),
-            child: Image.asset('asset/thi.png'),
+            margin: EdgeInsets.fromLTRB(4, 54, 0, 0),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(34, 40, 0, 0),
+            margin: EdgeInsets.fromLTRB(14, 40, 0, 0),
             width: 300,
             height: 100,
             child: const Text(
-              'Name:ongubanga',
+              'Name:abebe sultan taye',
               style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 24,
                   fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.normal),
+                  fontWeight: FontWeight.bold),
             ),
           ),
           Container(
             margin: EdgeInsets.fromLTRB(34, 0, 0, 0),
-            width: 300,
+            width: 500,
             height: 55,
-            child: const Text('email:ongubanga@gmail.com',
+            child: const Text('email:abebe sultan taye@gmail.com',
                 style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 20,
                     fontStyle: FontStyle.italic,
                     fontWeight: FontWeight.bold)),
           ),
@@ -99,7 +100,6 @@ class _profileState extends State<profile> {
             height: 55,
             child: Text(
               "+$_mobileNumber",
-              style: TextStyle(color: Colors.white),
             ),
           )
         ],
