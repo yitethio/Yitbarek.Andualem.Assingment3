@@ -14,3 +14,5 @@ class GoAsbezaIsucsess extends GoAsbezaState {
   // ignore: non_constant_identifier_names
   GoAsbezaIsucsess({required this.Goasbeza, required this.Histo});
 }
+
+class GoAsbezaFailed extends GoAsbezaState {}

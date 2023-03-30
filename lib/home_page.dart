@@ -31,28 +31,29 @@ class _homePageState extends State<homePage> {
       ),
       body: BlocBuilder<AsbezaBloc, GoAsbezaState>(builder: (context, state) {
         if (state is GoAsbezaInitial) {
-          return Center(
-              child: Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("asset/3047.jpg"), fit: BoxFit.cover)),
-            child: Row(
-              children: [
-                Container(
-                  margin: EdgeInsets.fromLTRB(30, 700, 0, 0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      BlocProvider.of<AsbezaBloc>(context)
-                          .add(const GoasbezaEvent());
-                    },
-                    child: const Text("Start"),
-                  ),
-                ),
-              ],
-            ),
-          ));
+          BlocProvider.of<AsbezaBloc>(context).add(const GoasbezaEvent());
+          // return Center(
+          //     child: Container(
+          //   height: MediaQuery.of(context).size.height,
+          //   width: MediaQuery.of(context).size.width,
+          //   decoration: BoxDecoration(
+          //       image: DecorationImage(
+          //           image: AssetImage("asset/3047.jpg"), fit: BoxFit.cover)),
+          //   child: Row(
+          //     children: [
+          //       Container(
+          //         margin: EdgeInsets.fromLTRB(30, 700, 0, 0),
+          //         child: ElevatedButton(
+          //           onPressed: () {
+          //             BlocProvider.of<AsbezaBloc>(context)
+          //                 .add(const GoasbezaEvent());
+          //           },
+          //           child: const Text("Start"),
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ));
         }
         if (state is GoAsbezaloding) {
           return const Center(

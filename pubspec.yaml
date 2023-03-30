@@ -41,6 +41,8 @@ dependencies:
   equatable: ^2.0.5
   universal_html: ^2.0.9
   mobile_number: ^2.1.1
+  sqflite: ^2.2.6
+  path_provider: ^2.0.14
 
 dev_dependencies:
   flutter_test:
