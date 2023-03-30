@@ -22,18 +22,16 @@ class AsbezaBloc extends Bloc<GoasbezaEvent, GoAsbezaState> {
         await _service.readGoAsbeza().then((val) => {
               Histo = val,
             });
-        HistoLoad = Item.historyList(HistoLoad);
+        HistoLoad = Item.historyList(Histo);
 
-        emit(GoAsbezaIsucsess(Goasbeza: activity!, Histo: Histo));
+        emit(GoAsbezaIsucsess(Goasbeza: activity!, Histo: HistoLoad));
       } catch (e) {
         emit(GoAsbezaInitial());
       }
     });
     on<Histoevent>((event, emit) => {
-          Histo.add(event.data),
           {
             HistoLoad.add(event.data),
-            event.data.itemAdded = 1,
             _service.saveGoAsbeza(event.data),
           }
         });

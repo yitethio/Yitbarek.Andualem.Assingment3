@@ -42,19 +42,18 @@ class Item {
     return json;
   }
 
-  static List? itemList(List item) {
+  static List itemList(List item) {
     List items = [];
     for (var i = 0; i < item.length; i++) {
-      print(item);
       items.add(Item.fromJson(item[i]));
     }
     return items;
   }
 
-  static List historyList(List asbeza) {
+  static List historyList(List item) {
     List asbeza = [];
-    for (var i = 0; i < asbeza.length; i++) {
-      asbeza.add(Item.historyfromJson(asbeza[i]));
+    for (var i = 0; i < item.length; i++) {
+      asbeza.add(Item.historyfromJson(item[i]));
     }
     return asbeza;
   }
